@@ -70,7 +70,7 @@ class Login(View):
 
     def get(self,request,*args,**kwargs):
         if request.user.is_authenticated:
-            return render(request,'index.html')
+            return render(request,'register.html')
         else:
             return render(request,'register.html')
 

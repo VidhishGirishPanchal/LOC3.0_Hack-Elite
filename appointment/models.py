@@ -14,3 +14,15 @@ class Appointment(models.Model):
 class Specialization(models.Model):
     name = models.CharField(max_length=50)
     img = models.ImageField(upload_to='images/specialization',null=True,blank=True)
+
+class Post(models.Model):
+    sno=models.AutoField(primary_key=True)
+    title=models.CharField(max_length=255)
+    author=models.CharField(max_length=14)
+    slug=models.CharField(max_length=130)
+    timeStamp=models.DateTimeField(blank=True)
+    img =models.ImageField(upload_to='images/blogs',null=True,blank=True)
+    content=models.TextField()
+
+    def __str__(self):
+        return self.title + " by " + self.author
