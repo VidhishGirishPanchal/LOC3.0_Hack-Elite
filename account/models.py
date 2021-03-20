@@ -27,6 +27,8 @@ class Doctor(User):
     specialization = models.CharField(max_length=50)
     experience = models.IntegerField(default=0)
     is_verified = models.BooleanField(default=False)
+    fees = models.IntegerField(default=0)
+    bio = models.TextField(null=True,blank=True)
     
     def __str__(self):
         return self.username

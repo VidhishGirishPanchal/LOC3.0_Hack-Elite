@@ -16,8 +16,8 @@ class Register(View):
 
     def post(self,request,role=None):
              
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
+        first_name = request.POST.get('firstname')
+        last_name = request.POST.get('lastname')
         username = request.POST.get('username')
         phone = request.POST.get('phone') 
         email = request.POST.get('email')
@@ -36,7 +36,7 @@ class Register(View):
                 if role == 'Doctor':
                     photo = request.POST.get('photo')
                     degree = request.POST.get('degree')
-                    specialization = request.POST.get('specialization')
+                    specialization = request.POST.get('specializations')
                     experience = request.POST.get('experience')
                     user = Doctor.objects.create_user(first_name=first_name,last_name=last_name,username=username,phone=phone,
                     email=email,password=password1,experience=experience,photo=photo,specialization=specialization,degree=degree,is_doctor=True)

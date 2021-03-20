@@ -52,23 +52,19 @@
               <input type="text" placeholder="Username" name="username" />
             </div>
             <!-- <label for="exampleInputEmail1">Photo</label> -->
-              <p class="leftaligned">Photo:</p>
-            <div class="input-field">
-
-              <i class="fas fa-user"></i>
-              <input type="file" accept="image/*" placeholder="Photo" name="photo" />
+            <br><br>
+            <div>
+              <h4><span>Photo : </span><input type="file" accept="image/*" placeholder="Photo" name="photo" /></h4>
             </div>
-             <p class="leftaligned">Degree:</p>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="file" accept="image/*" placeholder="Degree" name="degree" />
+            <br><br>
+            <div>
+              <h4><span>Degree : </span><input type="file" accept="image/*" placeholder="Degree" name="degree" /></h4>
             </div>
-
-            <!-- DROPDOWN -->
-            <!-- <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Specialization" name="specialization" />
-            </div> -->
+            <br><br>
+          
+            <select class="input-field" name="specializations" selected="selected">
+              <option value="cardiologist" selected="selected">Cardiologist</option>
+            </select> 
 
             <!-- <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
@@ -81,6 +77,7 @@
 
 
   </div> -->
+<!--
   <div class="dropdown">
   <button class="dropbtn"><span class="specialization">Specialization</span></button>
   <div class="dropdown-content">
@@ -88,14 +85,16 @@
     <a href="#">Audiologist</a>
     <a href="#">Dentist</a>
   </div>
-</div>
-
-
+</div> -->
 
             <!-- DROPDOWNEND -->
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Experience(in years)" name="experience" />
+              <input type="number" placeholder="Experience(in years)" name="experience" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Phone Number" name="phone" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
