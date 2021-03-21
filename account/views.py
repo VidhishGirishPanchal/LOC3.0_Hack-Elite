@@ -70,7 +70,7 @@ class Login(View):
 
     def get(self,request,*args,**kwargs):
         if request.user.is_authenticated:
-            return render(request,'register.html')
+            return render(request,'home4.html')
         else:
             return render(request,'register.html')
 
@@ -87,9 +87,9 @@ class Login(View):
                 try:
                     return redirect(request.POST.get('next'))
                 except:
-                    return render(request,'index.html')
+                    return render(request,'home4.html')
             else:
-                return render(request,'index.html')
+                return render(request,'home4.html')
 
         else:
             context = {
@@ -102,8 +102,12 @@ class Login(View):
 class Logout(View):
     def get(self,request,*args,**kwargs):
         auth.logout(request)
-        return render(request,'index.html')
+        return render(request,'about.html')
 
 class Ask(View):
     def get(self,request,*args,**kwargs):
-        return render(request,'ask.html')
+        if request.user.is_authenticated:
+            return render(request,'home4.html')
+        else:
+            return render(request,'ask.html')
+  

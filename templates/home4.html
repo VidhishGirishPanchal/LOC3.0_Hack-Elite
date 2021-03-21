@@ -35,16 +35,19 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navitems">
           <li class="nav-item">
             <a class="nav-link meet {% block homeactive %} {% endblock homeactive %}" aria-current="page"
-              href="/">Home</a>
+              href="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link meet {% block aboutactive %} {% endblock aboutactive %}" href="/about">About</a>
+            <a class="nav-link meet {% block aboutactive %} {% endblock aboutactive %}" href="/">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link meet {% block contactactive %} {% endblock contactactive %}" href="/contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link meet {% block blogactive %} {% endblock blogactive %}" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link meet" href="/account/logout">Logout</a>
           </li>
           <li class="nav-item">
           
@@ -77,61 +80,43 @@
       </div>
     </div>
   </div>
-  <div class="div2" data-aos="fade-up">
-    <div class="div2in row div1in">
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <img src="{% static 'img/doctor-checking.svg' %}" alt="img2" class="imgdiv2">
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
+<div class="div2" data-aos="fade-up">
+     <div class="div2in row div1in">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <img src="{% static 'img/doctor-checking.svg' %}" alt="img2" class="imgdiv2">
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
 
-        <b>
-          <p class="bigfont">Personal attention</p>
-          <p class="bigfont thodaupar"> with trusted doctors.</p>
-        </b>
-        <br>
-        <h5>Doctor Patient relation is very</h5>
-        <h5>important for a healthy doctor-patient relationship.</h5> <br>
-      </div>
-    </div>
-  </div>
+          <b>  <p class="bigfont">Personal attention</p> <p class="bigfont thodaupar"> with trusted doctors.</p></b>
+          <br>
+          <h5>Doctor Patient relation is very</h5>  <h5>important for a healthy doctor-patient relationship.</h5> <br>
+        </div>
+        <iframe style="overflow: hidden; text-align:centre;" src="https://i.pinimg.com/originals/33/ba/21/33ba21ccda561739ab950d66e5616b82.gif" width="300%" height="600px"></iframe>
+     </div>
+   </div>
 
 
   <!-- Carousel -->
-
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="embed-responsive embed-responsive-16by9">
-          <video class="embed-responsive-item d-block w-100" src="vid1.mp4" allowfullscreen autoplay loop></video>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="embed-responsive embed-responsive-16by9">
-          <video class="embed-responsive-item d-block w-100" src="vid2.mp4" allowfullscreen autoplay loop></video>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="embed-responsive embed-responsive-16by9">
-          <video class="embed-responsive-item d-block w-100" src="vid3.mp4" allowfullscreen autoplay loop></video>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<div class="div3" data-aos="fade-up">
+     <div class="div1in row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                <b>  <p class="bigfont">Online appointment and consultancy 24/7</p> <p class="bigfont"></p>and enjoy a healthy life.</b>
+                <br>
+                <h5>Get connected with doctors as per your</h5>  <h5>choice of timing.</h5> <br>
+                <!-- <button type="button" name="button" class="btn btn-lg btn-outline-success btn-light signupbtn">SignUp</button> -->
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="{% static 'img/register.svg' %}" alt="img" class=" imgdiv3">
+                </div>
+     </div>
+   </div>
 
 
 
 
 
 
-  <div class="div4" data-aos="fade-up">
+  <!-- <div class="div4" data-aos="fade-up">
     <div class="div1in row">
       <div class="col-lg-6 col-md-12 col-sm-12">
         <b>
@@ -147,7 +132,7 @@
         <img src="{% static 'img/register.svg' %}" alt="img" class=" imgdiv3">
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="div5" data-aos="fade-up">
     <div class="row div1in">
       <div class="col-lg-6 col-md-12 col-sm-12">
@@ -184,7 +169,6 @@
     </div>
 
   </div>
-
 
   <!-- <footer style="text-align:center;">Copyright©</footer> -->
   <!-- ===========================================BOOTSRAPCAOUSEL================================= -->

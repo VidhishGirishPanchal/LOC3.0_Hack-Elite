@@ -73,7 +73,7 @@
 
             <div class="row blue">
               <div class="description">
-              <h1>Rohit Nair</h1>
+              <h1>{{ pf.first_name }} {{ pf.last_name }}</h1>
               <h3>Patient</h3>
               </div>
               <div class="btns">
@@ -95,21 +95,20 @@
         <div class="containergreen">
           <h1 class="doctors">Completed Appointments</h1>
         </div>
-
+        {% for appointment in appointments %}
         <div col-lg-12>
           <div class="card" style="100%;">
       <div class="card-body">
         <img src="{% static 'img/doctor.jpg' %}" alt="doctor" class="doctorimg">
-      <h1 class="card-title">Dr. Vidhish Panchal</h1>
-      <h3 class="card-subtitle mb-2 text-muted">Heart Specialist</h3>
+      <h1 class="card-title">Dr. {{ appointment.doctor.first_name }} {{ appointment.doctor.last_name }}</h1>
+      <h3 class="card-subtitle mb-2 text-muted">{{ appointment.doctor.specialization }}</h3>
 
       <!-- <button type="button" name="button" class="btn btn-primary reports">Reports</button> -->
-      <h6 style="color:gray;">Your date and time of appointment: </h6>
-      <h1>DD-MM-YYYY</h1> <h1>12.20pm</h1>
+      <h6 style="color:gray;">Time : </h6>
+      <h1>{{ appointment.time }}</h1>
       <!-- <p class="card-text"></p> -->
 
-  <button type="submit" name="button" class="btn btn-primary btn-lg submit">Complete Payment</button>
-
+  
   <!-- <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Start Video Call</button> -->
 
 
@@ -118,10 +117,12 @@
 
       </div>
         </div>
+        {% endfor %}
 
 
 
       </div>
+      <button type="submit" name="button" class="btn btn-primary btn-lg submit">Complete Payment</button>
 
    <!-- ===================================CODE-END========================================================= -->
 

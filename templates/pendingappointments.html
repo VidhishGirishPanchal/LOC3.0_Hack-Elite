@@ -70,12 +70,12 @@
                   </div>
           </div>
           <div class="profile-line-img">
-            <img src="{% static 'img/doctor.jpg' %}" alt="" class="profile-pic">
+            <img src="{{ pf.photo.url }}" alt="" class="profile-pic">
 
             <div class="row blue">
               <div class="description">
-              <h1>Dr. Vidhish Panchal</h1>
-              <h3>Description</h3>
+              <h1>Dr. {{ pf.first_name }} {{ pf.last_name }}</h1>
+              <h3>{{ pf.bio }}</h3>
               </div>
               <div class="btns">
                   <a href="/editprofile" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong">Dashboard</button></a>
@@ -96,30 +96,39 @@
         <div class="containergreen">
           <h1 class="doctors">Pending Appointments</h1>
         </div>
-
+        {% for appointment in appointments %}
         <div col-lg-12>
           <div class="card" style="100%;">
       <div class="card-body">
-      <h1 class="card-title">Aman Jhunaid</h1>
+      <h1 class="card-title">{{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</h1>
       <h6 class="card-subtitle mb-2 text-muted">Heart Patient</h6>
       <h6 class="card-subtitle mb-2 text-muted">Age: 56 years</h6>
       <!-- <button type="button" name="button" class="btn btn-primary reports">Reports</button> -->
-      <h3>Give a date and time for appointment:</h3>
-      <input type="date" name="date" value="" placeholder="Date">
-      <input type="time" name="time" value="" placeholder="Date">
+      
       <!-- <p class="card-text"></p> -->
 
   <button type="submit" name="button" class="btn btn-primary submit">Submit</button>
-
-  <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Start Video Call</button>
-
-
-
-      </div>
-
+  {% if appointment.is_confirmed %}
+  <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Send Google meet link</button>
+  <form action="{% url 'send_link' %}" method="POST">
+    {% csrf_token %}
+      <input type="number" name="appointment_id" hidden>
+      <input type="text" name="link" placeholder="Link">
+    </form>
+  {% elif appointment.time %}
+  <h6>Waiting for confirmation from patient</h6>
+  {% else %}
+  <h3>Give a date and time for appointment:</h3>
+  <form action="{% url 'fix_time' %}" method="POST">
+    {% csrf_token %}
+      <input type="number" name="appointment_id" hidden>
+      <input type="date" name="date" placeholder="Date">
+      <input type="time" name="time" placeholder="Date">
+    </form>
+{% endif %}
       </div>
         </div>
-
+{% endfor %}
 
 
       </div>

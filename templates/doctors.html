@@ -24,7 +24,7 @@
 <h4 class="card-title experience">Experience: {{ doctor.experience }} years</h4>
 
 <p class="card-text">{{ doctor.bio }}</p>
-<a href="#" class="btn btn-primary">Connect</a>
+<a href="{% url 'book_appointment' doctor.id %}" class="btn btn-primary">Connect</a>
 {% endfor %}
 </div>
 </div>

@@ -10,6 +10,7 @@ class Appointment(models.Model):
     fees_paid = models.BooleanField(default=False)
     is_confirmed = models.BooleanField(default=False)
     is_completed = models.BooleanField(default=False)
+    link = models.URLField(max_length=200,null=True,blank=False)
 
 class Specialization(models.Model):
     name = models.CharField(max_length=50)
