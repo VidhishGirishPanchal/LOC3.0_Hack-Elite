@@ -122,8 +122,7 @@
   <form action="{% url 'fix_time' %}" method="POST">
     {% csrf_token %}
       <input type="number" name="appointment_id" hidden>
-      <input type="date" name="date" placeholder="Date">
-      <input type="time" name="time" placeholder="Date">
+      <input type="time" name="time" placeholder="time">
     </form>
 {% endif %}
       </div>
