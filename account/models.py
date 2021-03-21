@@ -27,9 +27,11 @@ class Doctor(User):
     specialization = models.CharField(max_length=50)
     experience = models.IntegerField(default=0)
     is_verified = models.BooleanField(default=False)
+    fees = models.IntegerField(default=0)
+    bio = models.TextField(null=True,blank=True)
     
     def __str__(self):
-        return self.username
+        return self.email
     
     class Meta:
         verbose_name = 'Doctor'
@@ -41,7 +43,7 @@ class Patient(User):
 
 
     def __str__(self):
-        return self.username
+        return self.email
 
     class Meta:
         verbose_name = 'Patient'

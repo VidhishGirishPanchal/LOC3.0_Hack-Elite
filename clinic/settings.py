@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'appointment.apps.AppointmentConfig',
     'account.apps.AccountConfig',
+    'payments',
 ]
 
 MIDDLEWARE = [
