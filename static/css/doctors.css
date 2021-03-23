@@ -8,6 +8,12 @@ body{
   /* background-color: #d7d7d9; */
 
 }
+.fa-plus-circle{
+  color:#04fe9e;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid white;
+}
 .containergreen{
   height: 200px;
   border-radius: 0 0 100% 100%;

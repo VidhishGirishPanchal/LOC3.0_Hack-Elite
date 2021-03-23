@@ -45,7 +45,7 @@
                   <li class="nav-item">
                     <!-- <a class="nav-link colorbtns" href="{% url 'login' %}"><button class="btn btn-primary">Signup / Signin</button></a> -->
                   </li>
-                 
+
                 </ul>
 
               </div>
@@ -78,9 +78,9 @@
               <h3>Patient</h3>
               </div>
               <div class="btns">
-                  <a href="/editprofile" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong">Dashboard</button></a>
-                  <a href="/addpost" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong appointment">Completed Appointments</button></a>
-                  <a href="/addpost" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong appointment">Book an Appointment</button></a>
+                  <!-- <a href="/editprofile" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong">Dashboard</button></a> -->
+                  <!-- <a href="/addpost" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong appointment">Completed Appointments</button></a> -->
+                  <!-- <a href="/addpost" class="btnsa"><button type="button" name="button" class="btn btn-light btn-outline-primary btn-lg btnlong appointment">Book an Appointment</button></a> -->
 
               </div>
             </div>
@@ -112,12 +112,13 @@
       <p>{{ appointment.link }}</p>
       {% else %}
       <p>Doctor will send the time soon</p>
+      <a href="{% url 'index' %}"><button type="button" class="btn btn-primary" name="button">Payment</button></a>
       {% endif %}
-    
-  <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Send Google meet link</button>
+
+  <!-- <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Send Google meet link</button> -->
 
       <!-- <button type="button" name="button" class="btn btn-primary reports">Reports</button> -->
-      
+
       <!-- <p class="card-text"></p> -->
 
   <!-- <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Start Video Call</button> -->
@@ -146,17 +147,17 @@
               <img src="{% static 'appointment.doctor.photo.url' %}" alt="doctor" class="doctorimg">
             <h1 class="card-title">Dr. {{ appointment.doctor.first_name }} {{ appointment.doctor.last_name }}</h1>
             <h3 class="card-subtitle mb-2 text-muted">{{ appointment.doctor.specialization }}</h3>
-      
+
             <!-- <button type="button" name="button" class="btn btn-primary reports">Reports</button> -->
             <h6 style="color:gray;">Time : </h6>
             <h1>{{ appointment.time }}</h1>
             <!-- <p class="card-text"></p> -->
-      
-        
+
+
         <!-- <button type="submit" name="button" class="btn btn-primary btn-lg submit"><i class="fas fa-video"></i>Start Video Call</button> -->
-      
-      
-      
+
+
+
             </div>
 
       </div>
@@ -165,6 +166,68 @@
 
 
       </div>
+
+      <!-- <section class="py-6 pt-7 bg-success bg-gradient">
+            <div class="bg-holder"
+                style="background-image:url(assets/img/illustrations/dot.png);background-position:left bottom;background-size:auto;filter:contrast(1.5);">
+            </div>
+
+
+            <div class="bg-holder"
+                style="background-image:url(assets/img/illustrations/dot-2.png);background-position:right top;background-size:auto;margin-top:-75px;">
+            </div>
+
+
+            <div class="container footer">
+                <div class="row">
+                    <div class="col-12 col-lg-4 order-0 order-sm-0 pe-6"><a class="text-decoration-none" href="#"><img
+                                class="img-fluid me-2" src="assets/img/icons/footer-logo.png" alt="" /><span
+                                class="fw-bold fs-1 text-light">Health+</span></a>
+                        <p class="mt-3 text-white">Health+ provides progressive, and affordable healthcare, accessible
+                            on mobile
+                            and online for everyone</p>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg mb-3 order-2 order-sm-1">
+                        <h6 class="lh-lg fw-bold text-light">Company</h6>
+                        <ul class="list-unstyled mb-md-4 mb-lg-0">
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">About</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none"
+                                    href="#!">Testimonials</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Find a
+                                    doctor</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Apps</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg mb-3 order-3 order-sm-2">
+                        <h6 class="lh-lg fw-bold text-light"> Region </h6>
+                        <ul class="list-unstyled mb-md-4 mb-lg-0">
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Indonesia</a>
+                            </li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Singapore</a>
+                            </li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Guide</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Hongkong</a>
+                            </li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Canada</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg mb-3 order-1 order-sm-3">
+                        <h6 class="lh-lg fw-bold text-light">Help </h6>
+                        <ul class="list-unstyled mb-md-4 mb-lg-0">
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Help center</a>
+                            </li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Contact
+                                    support</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Guide</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none"
+                                    href="#!">Instructions</a></li>
+                            <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">How it
+                                    works</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
    <!-- ===================================CODE-END========================================================= -->
 

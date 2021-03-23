@@ -12,6 +12,12 @@
   margin-left: 0px;
 
 }
+.fa-plus-circle{
+  color:#04fe9e;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid white;
+}
 .specialization{
   text-align: left;
   font-family: "Poppins", sans-serif;

@@ -5,12 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  overflow-y: scroll;
+}
 body,
 input {
   font-family: "Poppins", sans-serif;
-}
 
+}
+.fa-plus-circle{
+  color:#04fe9e;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid white;
+}
 .container {
   position: relative;
   width: 100%;

@@ -3,7 +3,12 @@
 body{
   overflow-x: hidden;
 }
-
+.fa-plus-circle{
+  color:#04fe9e;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid white;
+}
 
 /* --------------------------------NAVBAR-START-------------------------- */
 .navbar{

@@ -35,7 +35,7 @@
 
           <form action="{% url 'register' 'Patient' %}" class="sign-up-form" method="POST">
             {% csrf_token %}
-            <h2 class="title">Sign up</h2>
+            <h2 class="title" style="margin-top:30px;">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="First Name" name="firstname" />
@@ -64,7 +64,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Confirm Password" name="password2" />
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="Sign up"  style="position: relative; bottom:15px;margin-bottom:5%;" />
 
           </form>
           <div class="alert alert-{{message_class}}">{{message}}</div>
